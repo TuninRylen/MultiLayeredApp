@@ -1,0 +1,6 @@
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.entitiess\bin\Debug\Northwind.entitiess.dll
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.entitiess\bin\Debug\Northwind.entitiess.pdb
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.entitiess\obj\Debug\Northwind.Entities.csproj.AssemblyReference.cache
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.entitiess\obj\Debug\Northwind.Entities.csproj.CoreCompileInputs.cache
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.entitiess\obj\Debug\Northwind.entitiess.dll
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.entitiess\obj\Debug\Northwind.entitiess.pdb

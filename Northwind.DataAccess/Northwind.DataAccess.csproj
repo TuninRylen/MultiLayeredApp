@@ -51,17 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\ICategoryDal.cs" />
-    <Compile Include="Abstract\IEntitiyRepository.cs" />
-    <Compile Include="Abstract\IProductDal.cs" />
-    <Compile Include="Concrete\EntitiyFramework\EfCategoryDal.cs" />
-    <Compile Include="Concrete\EntitiyFramework\EfEntityRepositoryBase.cs" />
-    <Compile Include="Concrete\EntitiyFramework\NorthwindContext.cs" />
-    <Compile Include="Concrete\EntitiyFramework\EfProductDal.cs" />
-    <Compile Include="Concrete\NHibernate\NhProductDal.cs" />
+    <Compile Include="Concrete\NorthwindContext.cs" />
+    <Compile Include="Concrete\ProductDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

@@ -42,6 +42,10 @@ namespace Northwind.WebForms
             cbxCategory2.DataSource = _categoryService.GetAll();
             cbxCategory2.DisplayMember = "CategoryName";
             cbxCategory2.ValueMember = "CategoryId";
+
+            cbxCategory3.DataSource = _categoryService.GetAll();
+            cbxCategory3.DisplayMember = "CategoryName";
+            cbxCategory3.ValueMember = "CategoryId";
         }
 
         private void LoadProducts()
@@ -76,18 +80,25 @@ namespace Northwind.WebForms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            _productService.Add(new Product
+            try
             {
-                CategoryId = Convert.ToInt32(cbxCategory2.SelectedValue),
-                ProductName = tbxProductName2.Text,
-                QuantityPerUnit = tbxQuantityPerUnit.Text,
-                UnitPrice = Convert.ToDecimal(tbxUnitPrice.Text),
-                UnitsInStock = Convert.ToInt16(tbxStok.Text)
-            });
+                _productService.Add(new Product
+                {
+                    CategoryId = Convert.ToInt32(cbxCategory2.SelectedValue),
+                    ProductName = tbxProductName2.Text,
+                    QuantityPerUnit = tbxQuantityPerUnit.Text,
+                    UnitPrice = Convert.ToDecimal(tbxUnitPrice.Text),
+                    UnitsInStock = Convert.ToInt16(tbxStok.Text)
+                });
 
-            MessageBox.Show("Ürün Kaydedildi");
+                MessageBox.Show("Ürün Kaydedildi");
 
-            LoadProducts();
+                LoadProducts();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -99,7 +110,7 @@ namespace Northwind.WebForms
                 ProductName = tbxProductName3.Text,
                 QuantityPerUnit = tbxQuantityPerUnit3.Text,
                 UnitPrice = Convert.ToDecimal(tbxUnitPrice3.Text),
-                UnitsInStock = Convert.ToInt16(tbxUnitStock3)
+                UnitsInStock = Convert.ToInt16(tbxUnitStock3.Text)
             });
 
             MessageBox.Show("Ürün Güncellendi");
@@ -109,7 +120,36 @@ namespace Northwind.WebForms
 
         private void dgwProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            var row = dgwProduct.CurrentRow;
 
+            tbxProductName3.Text = row.Cells[1].Value.ToString();
+            cbxCategory3.SelectedValue = row.Cells[2].Value;
+            tbxUnitPrice3.Text = row.Cells[3].Value.ToString();
+            tbxQuantityPerUnit3.Text = row.Cells[4].Value.ToString();
+            tbxUnitStock3.Text = row.Cells[5].Value.ToString();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgwProduct.CurrentRow != null)
+            {
+                try
+                {
+                    _productService.Delete(new Product
+                    {
+                        ProductId = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value)
+                    });
+
+                    MessageBox.Show("Ürün Silindi");
+                    LoadProducts();
+                }
+                catch (Exception exeption)
+                {
+
+                    MessageBox.Show(exeption.Message);
+                }
+                
+            }     
         }
     }
 }

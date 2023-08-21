@@ -21,3 +21,10 @@ C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\obj\Debug\Northwi
 C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\obj\Debug\Northwind.WebForms.csproj.CopyComplete
 C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\obj\Debug\Northwind.WebForms.exe
 C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\obj\Debug\Northwind.WebForms.pdb
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\bin\Debug\Northwind.Business.dll.config
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\bin\Debug\FluentValidation.dll
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\bin\Debug\FluentValidation.xml
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ugrst\source\repos\MultiLayeredApp\Northwind.WebForms\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
